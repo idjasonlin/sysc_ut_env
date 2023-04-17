@@ -33,9 +33,10 @@ class UtTopBase : public ModuleBase {
       total_tc_cnt_++;
     }
 
-  private:
     DUT    *p_dut_;
     MIRROR *p_mirror_;
+
+  private:
     std::vector<TcGlobalBase *> v_tc_;
     uint32_t total_tc_cnt_ = 0;
 

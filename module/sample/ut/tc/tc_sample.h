@@ -12,6 +12,12 @@ class TcSample : public TcBase {
   void RunTc(void) override {
     printf("InTcSample\n");
   }
+
+  protected:
+    virtual void b_sample(
+        tlm::tlm_generic_payload &trans,
+        sc_time &delay) override {
+    }
 };
 
 #endif

@@ -5,6 +5,8 @@
 template <typename DUT, typename MIRROR>
 void UtTop<DUT, MIRROR>::PortBinding(void) {
   /* Implement Port Bindings here */
+  // p_dut_, p_mirror_ are decalred in ut_top_base.h
+  this->p_dut_->i_sample(this->p_mirror_->t_sample);
   /* End of Implement Port Bindings here */
 }
 

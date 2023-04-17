@@ -9,6 +9,10 @@ class SampleTop : public ModuleBase {
 
     explicit SampleTop(const sc_core::sc_module_name sc_name);
     ~SampleTop(void);
+
+    /* Port Sample */
+    tlm_utils::simple_initiator_socket<SampleTop> i_sample;
+    /* End of Port Sample */
 };
 
 #endif

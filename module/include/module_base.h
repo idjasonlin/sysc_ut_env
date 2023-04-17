@@ -2,6 +2,8 @@
 #define __MODULE_BASE_H__
 
 #include <systemc.h>
+#include <tlm_utils/simple_initiator_socket.h>
+#include <tlm_utils/simple_target_socket.h>
 
 class ModuleBase : public sc_module {
   public:

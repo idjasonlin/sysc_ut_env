@@ -17,6 +17,12 @@ class TcGlobalBase : public ModuleBase {
  protected:
   // be implemented by each TC
   virtual void RunTc(void) = 0;
+  /* Transport Function Hooks */
+  virtual void h_b_transport(
+      tlm::tlm_generic_payload &trans,
+      sc_time &delay,
+      uint32_t port_idx) = 0;
+  /* End of Transport Function Hooks */
 
  private:
   /* SC_THREAD */
