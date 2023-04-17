@@ -1,3 +1,6 @@
+#ifndef __SAMPLE_TOP_H__
+#define __SAMPLE_TOP_H__
+
 #include <module_base.h>
 
 class SampleTop : public ModuleBase {
@@ -7,4 +10,6 @@ class SampleTop : public ModuleBase {
     explicit SampleTop(const sc_core::sc_module_name sc_name);
     ~SampleTop(void);
 };
+
+#endif
 

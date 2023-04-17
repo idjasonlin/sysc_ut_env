@@ -5,8 +5,8 @@
 
 int sc_main(int argc, char *argv[]) {
   printf("Hello SystemC With Test!\n");
-  UtTop<SampleTop, SampleTop> *p_test =
-    new UtTop<SampleTop, SampleTop>("UtTop");
+  UtTop<DUT_CLASS, MIRROR_CLASS> *p_test =
+    new UtTop<DUT_CLASS, MIRROR_CLASS>("UtTop");
 
   return 0;
 }
