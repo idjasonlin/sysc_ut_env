@@ -17,7 +17,7 @@ set(BASE_INC_DIR
   ../include)
 
 set(UT_INC_DIR
-  ./ut/include)
+  ./ut/include ./ut/tc)
 
 file(GLOB_RECURSE ALL_SRC
   src/*.cc ut/*.cc)

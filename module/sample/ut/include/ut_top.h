@@ -11,7 +11,9 @@ class UtTop : public UtTopBase<DUT, MIRROR> {
       : UtTopBase<DUT, MIRROR>(sc_name){
     }
 
-    void port_binding(void) override;
+    void PortBinding(void) override;
+
+    void RegTc(void) override;
 };
 
 #endif
