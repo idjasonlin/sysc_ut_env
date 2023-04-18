@@ -43,13 +43,11 @@ class UtTopBase : public ModuleBase {
     /* SC_THREAD */
     void UtThread(void) {
       wait(SC_ZERO_TIME);
-      printf("UTTHREAD : %d\n",
-        total_tc_cnt_);
+
+      DbgInfo("UTTHREAD: %d", total_tc_cnt_);
       for (uint32_t tc_cnt = 0; tc_cnt < total_tc_cnt_; tc_cnt++) {
         v_tc_.at(tc_cnt)->e_start_tc.notify();
-        printf("WAIT!\n");
         wait();
-        printf("WAIT!\n");
       }
     }
     /* End of SC_THREAD */

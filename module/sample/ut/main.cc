@@ -13,6 +13,8 @@ int sc_main(int argc, char *argv[]) {
 
   p_ut_top->RegTc();
 
+  sc_report_handler::set_log_file_name("sim.log");
+
   sc_start();
 
   return 0;

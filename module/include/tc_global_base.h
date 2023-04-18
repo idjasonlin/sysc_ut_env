@@ -27,9 +27,7 @@ class TcGlobalBase : public ModuleBase {
  private:
   /* SC_THREAD */
   void StartTcThread(void) {
-    printf("WAIT START TC\n");
     wait(e_start_tc);
-    printf("WAIT START TC DONE\n");
     this->RunTc();
   }
   /* End of SC_THREAD */

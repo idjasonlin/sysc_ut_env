@@ -10,7 +10,8 @@ class TcSample : public TcBase {
 
   // This is invoked by a SC_THREAD
   void RunTc(void) override {
-    printf("InTcSample\n");
+    DbgInfo("InTcSample");
+    printf("RunTC\n");
   }
 
   protected:
