@@ -1,7 +1,7 @@
 #ifndef __TC_BASE_H__
 #define __TC_BASE_H__
 #include <tc_global_base.h>
-#include <mirror_top.h>
+#include <ut_def.h>
 
 class TcBase : public TcGlobalBase {
   public:
@@ -19,7 +19,7 @@ class TcBase : public TcGlobalBase {
         sc_time &delay,
         uint32_t port_idx) override {
       switch (port_idx) {
-        case MirrorTop::SAMPLE:
+        case MIRROR_CLASS::SAMPLE:
           b_sample(trans, delay);
           break;
         default:

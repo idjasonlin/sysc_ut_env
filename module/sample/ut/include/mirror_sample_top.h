@@ -1,18 +1,18 @@
-#ifndef __MIRROR_H__
-#define __MIRROR_H__
+#ifndef __MIRRORSAMPLETOP_H__
+#define __MIRRORSAMPLETOP_H__
 #include <module_base.h>
 #include <mirror_base.h>
 
-class MirrorTop : public MirrorBase {
+class MirrorSampleTop : public MirrorBase {
   public:
-    explicit MirrorTop(sc_module_name sc_name)
+    explicit MirrorSampleTop(sc_module_name sc_name)
      : MirrorBase(sc_name)
      , t_sample("t_sample") {
-       t_sample.register_b_transport(this, &MirrorTop::b_sample);
+       t_sample.register_b_transport(this, &MirrorSampleTop::b_sample);
     }
 
     /* Port */
-    tlm_utils::simple_target_socket<MirrorTop> t_sample;
+    tlm_utils::simple_target_socket<MirrorSampleTop> t_sample;
     /* End of Port */
 
     /* Port Index Declarations */
